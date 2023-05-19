@@ -1,7 +1,7 @@
 import express from 'express';
 import { engine } from 'express-handlebars';
 import { notFound, catchError } from './middlewares/error.js';
-import router from "./router.js";
+import router from "./router/index.js";
 
 const app = express();
 
