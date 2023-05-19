@@ -1,8 +1,11 @@
-FAQ<hr/>
 {{#if faqs}}
-    {{#each faqs}}
-        {{title}}<br/>{{content}}<hr/>
-    {{/each}}
+    <div>
+        {{#each faqs}}
+            <div style="margin: 25px; padding: 25px; border-radius: 25px; background-color: cornflowerblue;">
+                {{title}}<hr/>{{content}}
+            </div>
+        {{/each}}
+    </div>
 {{else}}
     <p>Brak danych do wyświetlenia.</p>
 {{/if}}
