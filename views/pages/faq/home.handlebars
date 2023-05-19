@@ -1,1 +1,8 @@
-FAQ
+FAQ<hr/>
+{{#if faqs}}
+    {{#each faqs}}
+        {{title}}<br/>{{content}}<hr/>
+    {{/each}}
+{{else}}
+    <p>Brak danych do wyświetlenia.</p>
+{{/if}}

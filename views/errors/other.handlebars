@@ -1,4 +1,8 @@
-<h2>Niespodziewany błąd {{status}}: {{message}}</h2>
+{{#if message}}
+    <h2>Niespodziewany błąd {{status}}: {{message}}</h2>
+{{else}}
+    <h2>Niespodziewany błąd {{status}}</h2>
+{{/if}}
 <p>
     Przepraszamy, ale czasami tak się zdaży iż w rozbudowanym systemie informatycznym wystąpią pewne błędy.<br/>
     Już pracujemy nad poprawą tej części naszego serwisu w celu wyeliminowania tego problemu w przyszłości.
@@ -15,7 +19,11 @@
     <label for="author">Twój email <span style="color: red;">( Wymagane )</span></label><br/>
     <input type="email" name="author" id="author" placeholder="twoj.email@example.com" required/><br/><br/>
     <label for="subject">Temat wiadomości:</label><br/>
-    <input type="text" name="subject" id="subject" value="Błąd: {{status}}, {{message}}." required/><br/><br/>
+    {{#if message}}
+        <input type="text" name="subject" id="subject" value="Błąd: {{status}}, {{message}}" required/><br/><br/>
+    {{else}}
+        <input type="text" name="subject" id="subject" value="Błąd: {{status}}" required/><br/><br/>
+    {{/if}}
     <label for="message">Treść zgłoszenia: <span style="color: red;">( Wymagane )</span></label><br/>
     <textarea name="message" id="message" cols="30" rows="10"  placeholder="Tutaj opisz jak doszło do powstania błędu." required></textarea><br/><br/>
 
