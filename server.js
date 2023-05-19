@@ -3,7 +3,7 @@ dotenv.config();
 import app from "./app.js";
 
 app.set('PORT', process.env.PORT || 8080);
-app.set('NODE_ENV', process.env.NODE_ENV || 'prod');
+app.set('NODE_ENV', process.env.NODE_ENV || 'production'); // development, production
 
 
 app.listen(app.get('PORT'), () => {
