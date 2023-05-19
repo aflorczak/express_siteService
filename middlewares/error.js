@@ -15,5 +15,4 @@ export const catchError = (err, req, res, next) => {
     } else {
         res.render('errors/other.handlebars', { status, message });
     }
-    next();
 }
